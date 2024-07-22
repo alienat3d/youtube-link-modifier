@@ -87,7 +87,7 @@ body {
 }
 
 .arrows::before {
-  bottom: 40%;
+  bottom: 0;
   animation-name: first-arrow-moving;
   animation-duration: 1.5s;
   animation-delay: .6s;
@@ -102,7 +102,7 @@ body {
 .input {
   margin-top: 1%;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   margin-left: auto;
   border-radius: 10px;
   padding: 10px 15px;
