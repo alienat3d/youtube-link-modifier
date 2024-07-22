@@ -17,8 +17,15 @@ const renderOutput = () => {
 	output.textContent = `${linkInput.value}?&t=${calcSeconds()}`;
 }
 
-hoursInput.addEventListener('input', renderOutput);
-minutesInput.addEventListener('input', renderOutput);
+hoursInput.addEventListener('input', renderOutput());
+minutesInput.addEventListener('input',  () => {
+	if (minutesInput.value > 59) minutesInput.value = '';
+	renderOutput();
+});
+secondsInput.addEventListener('input', () => {
+	if (secondsInput.value > 59) secondsInput.value = '';
+	renderOutput();
+});
 
 output.addEventListener('click', () => {
   navigator.clipboard.writeText(output.textContent);
