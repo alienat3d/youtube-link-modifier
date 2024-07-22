@@ -60,11 +60,16 @@ body {
 
 .time-container {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
+}
+@media (min-width: 768px) {
+	.time-container {
+	justify-content: space-evenly;
+	}
 }
 
 .label {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -115,11 +120,7 @@ body {
 }
 
 .time-container label {
-	width: 8%;
-	text-align: center;
-}
-.time-container label + label {
-	margin-left: 50px;
+	width: 70px;
 }
 .time-container input::-webkit-outer-spin-button,
 .time-container input::-webkit-inner-spin-button {
@@ -135,6 +136,7 @@ body {
 .output-title {
   margin-bottom: 1%;
   font-weight: 500;
+	font-size: 20px;
 }
 
 #output {
