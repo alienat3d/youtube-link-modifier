@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Модификатор ссылок YouTube</title>
+	<script src="script.js" defer></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="background"></div>
+  <div class="container">
+    <h1 class="heading">Модифицирует ссылку с определённого момента</h1>
+    <sub class="subheading">(введите нужное время в поля ниже и нажмите на новую ссылку, чтобы скопировать)</sub>
+    <label class="label" for="input">YouTube Link:
+      <input class="input" id="link-input" type="text">
+    </label>
+    <div class="time-container">
+			<label class="label" for="input">Часы:
+				<input class="input input--short" id="hours-input" type="number">
+			</label>
+			<label class="label" for="input">Минуты:
+				<input class="input input--short" id="minutes-input" type="number">
+			</label>
+			<label class="label" for="input">Секунды:
+				<input class="input input--short" id="seconds-input" type="number">
+			</label>
+		</div>
+    <div class="arrows"></div>
+    <div class="output-container">
+      <h2 class="output-title">Вывод (клик, чтобы скопировать):</h2>
+      <p id="output"></p>
+      <p id="alert">Текст скопирован!</p>
+    </div>
+  </div>
+</body>
+</html>
