@@ -29,6 +29,7 @@ body {
   background-color: #333;
   min-height: 100vh;
   position: relative;
+	overflow-y: hidden;
 }
 
 .background {
