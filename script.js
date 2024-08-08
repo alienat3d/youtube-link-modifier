@@ -7,6 +7,8 @@ const secondsInput = document.querySelector('#seconds-input');
 const output = document.querySelector('#output');
 const alertPopup = document.querySelector('#alert');
 
+const inputsArr = [linkInput, hoursInput, minutesInput, secondsInput];
+
 const calcSeconds = () => {
 	const total = +secondsInput.value + (+minutesInput.value * 60) + (+hoursInput.value * 3600);
 	return total;
@@ -41,3 +43,7 @@ output.addEventListener('click', () => {
 		alertPopup.classList.remove('show');
 	}, 3000);
 });
+
+inputsArr.forEach(input => 
+	input.addEventListener('focus', () => input.value = '')
+);
