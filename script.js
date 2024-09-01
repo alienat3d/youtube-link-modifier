@@ -16,6 +16,7 @@ const calcSeconds = () => {
 
 const renderOutput = () => {
 	if (linkInput.value === '') return;
+	if (hoursInput.value === '' && minutesInput.value === '' && secondsInput.value === '') return;
 	if (linkInput.value.match(/watch\?/g)) {
 		output.textContent = `${linkInput.value}?&t=${calcSeconds()}s`;
 	} else {
@@ -44,8 +45,11 @@ output.addEventListener('click', () => {
 	}, 3000);
 });
 
-inputsArr.forEach(input => 
-	input.addEventListener('focus', () => input.value = '')
-);
+inputsArr.forEach(input => {
+	input.addEventListener('focus', () => {
+		input.value = ''
+		renderOutput();
+	});
+});
 
 linkInput.addEventListener('input', renderOutput);
