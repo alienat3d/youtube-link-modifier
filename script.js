@@ -47,3 +47,5 @@ output.addEventListener('click', () => {
 inputsArr.forEach(input => 
 	input.addEventListener('focus', () => input.value = '')
 );
+
+linkInput.addEventListener('input', renderOutput);
